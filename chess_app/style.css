@@ -1,0 +1,700 @@
+:root {
+    --bg-color: #0f172a;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+
+    --accent-blue: #3b82f6;
+    --accent-purple: #8b5cf6;
+    --accent-pink: #ec4899;
+
+    --board-light: #e2e8f0;
+    --board-dark: #475569;
+
+    --highlight-move: rgba(255, 255, 0, 0.4);
+    --highlight-check: rgba(239, 68, 68, 0.6);
+    --highlight-selected: rgba(59, 130, 246, 0.5);
+}
+
+/* Themes */
+body.theme-classic {
+    --bg-color: #2c2926;
+    --glass-bg: rgba(240, 230, 210, 0.9);
+    --glass-border: #8b4513;
+    --glass-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --text-primary: #3e2723;
+    --text-secondary: #5d4037;
+    --board-light: #f0d9b5;
+    --board-dark: #b58863;
+    --accent-blue: #8b4513;
+    --accent-purple: #a1887f;
+    --accent-pink: #d84315;
+    background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    /* Subtle texture */
+}
+
+body.theme-neon {
+    --bg-color: #000000;
+    --glass-bg: rgba(0, 0, 0, 0.8);
+    --glass-border: #0ff;
+    --text-primary: #0ff;
+    --text-secondary: #0f0;
+    --board-light: #111;
+    --board-dark: #222;
+    --highlight-selected: rgba(0, 255, 255, 0.3);
+    --highlight-move: rgba(0, 255, 0, 0.3);
+    --accent-blue: #0ff;
+    --accent-purple: #f0f;
+    --accent-pink: #ff0;
+}
+
+/* Ocean Theme */
+body.theme-ocean {
+    --bg-color: #0f2942;
+    --glass-bg: rgba(20, 50, 80, 0.6);
+    --glass-border: #4fc3f7;
+    --text-primary: #e1f5fe;
+    --text-secondary: #81d4fa;
+    --board-light: #b3e5fc;
+    --board-dark: #0277bd;
+    --accent-blue: #0288d1;
+    --accent-purple: #0277bd;
+    --accent-pink: #4fc3f7;
+    background: linear-gradient(to bottom, #0f2942, #1a4b77);
+}
+
+/* Forest Theme */
+body.theme-forest {
+    --bg-color: #1b2e1b;
+    --glass-bg: rgba(40, 60, 40, 0.7);
+    --glass-border: #66bb6a;
+    --text-primary: #e8f5e9;
+    --text-secondary: #a5d6a7;
+    --board-light: #c8e6c9;
+    --board-dark: #388e3c;
+    --accent-blue: #66bb6a;
+    --accent-purple: #4caf50;
+    --accent-pink: #81c784;
+    background: linear-gradient(to bottom, #1b2e1b, #2e4d2e);
+}
+
+/* Cyberpunk Theme */
+body.theme-cyberpunk {
+    --bg-color: #050510;
+    --glass-bg: rgba(20, 20, 40, 0.85);
+    --glass-border: #fce300;
+    --glass-shadow: 0 0 15px #fce300;
+    --text-primary: #fce300;
+    --text-secondary: #00ffea;
+    --board-light: #222;
+    --board-dark: #444;
+    --highlight-selected: rgba(252, 227, 0, 0.4);
+    --highlight-move: rgba(0, 255, 234, 0.4);
+    --accent-blue: #00ffea;
+    --accent-purple: #ff0055;
+    --accent-pink: #fce300;
+}
+
+/* Monochrome Theme */
+body.theme-monochrome {
+    --bg-color: #111;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: #fff;
+    --text-primary: #fff;
+    --text-secondary: #aaa;
+    --board-light: #ddd;
+    --board-dark: #333;
+    --accent-blue: #fff;
+    --accent-purple: #ccc;
+    --accent-pink: #999;
+    filter: grayscale(100%);
+}
+
+/* Sunset Theme */
+body.theme-sunset {
+    --bg-color: #2d1b2e;
+    --glass-bg: rgba(60, 30, 60, 0.5);
+    --glass-border: #ff9800;
+    --text-primary: #fff3e0;
+    --text-secondary: #ffcc80;
+    --board-light: #ffeb3b;
+    --board-dark: #f57c00;
+    --accent-blue: #ff9800;
+    --accent-purple: #9c27b0;
+    --accent-pink: #e91e63;
+    background: linear-gradient(45deg, #2d1b2e, #b0463e);
+}
+
+/* Space Theme */
+body.theme-space {
+    --bg-color: #000;
+    --glass-bg: rgba(10, 10, 30, 0.7);
+    --glass-border: #aaaaff;
+    --text-primary: #e0e0ff;
+    --text-secondary: #aaaaff;
+    --board-light: #ccccff;
+    --board-dark: #333366;
+    --accent-blue: #5555ff;
+    --accent-purple: #9933ff;
+    --accent-pink: #ff33cc;
+    background-image: radial-gradient(#fff 1px, transparent 1px), radial-gradient(#fff 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+}
+
+/* Pastel Theme */
+body.theme-pastel {
+    --bg-color: #fdf2f8;
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: #f9a8d4;
+    --glass-shadow: 0 4px 12px rgba(249, 168, 212, 0.3);
+    --text-primary: #831843;
+    --text-secondary: #db2777;
+    --board-light: #fce7f3;
+    --board-dark: #f472b6;
+    --accent-blue: #60a5fa;
+    --accent-purple: #c084fc;
+    --accent-pink: #f472b6;
+}
+
+/* Gothic Theme */
+body.theme-gothic {
+    --bg-color: #1a0505;
+    --glass-bg: rgba(40, 10, 10, 0.8);
+    --glass-border: #7f1d1d;
+    --text-primary: #fee2e2;
+    --text-secondary: #ef4444;
+    --board-light: #991b1b;
+    --board-dark: #450a0a;
+    --accent-blue: #7f1d1d;
+    --accent-purple: #450a0a;
+    --accent-pink: #991b1b;
+}
+
+/* Terminal Theme */
+body.theme-terminal {
+    --bg-color: #000;
+    --glass-bg: rgba(0, 50, 0, 0.8);
+    --glass-border: #0f0;
+    --text-primary: #0f0;
+    --text-secondary: #0a0;
+    --board-light: #000;
+    --board-dark: #003300;
+    --accent-blue: #0f0;
+    --accent-purple: #0f0;
+    --accent-pink: #0f0;
+    font-family: 'Courier New', monospace;
+    --highlight-selected: rgba(0, 255, 0, 0.3);
+    --highlight-move: rgba(0, 200, 0, 0.3);
+}
+
+body.theme-terminal .glass-panel {
+    border-radius: 0;
+}
+
+/* Royal Theme */
+body.theme-royal {
+    --bg-color: #2e003e;
+    --glass-bg: rgba(60, 0, 80, 0.6);
+    --glass-border: #ffd700;
+    --text-primary: #ffd700;
+    --text-secondary: #e6c200;
+    --board-light: #f3e5f5;
+    --board-dark: #7b1fa2;
+    --accent-blue: #ffd700;
+    --accent-purple: #4a148c;
+    --accent-pink: #ce93d8;
+}
+
+/* Rainbow Theme */
+body.theme-rainbow {
+    --bg-color: #222;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: transparent;
+    --text-primary: #fff;
+    --board-light: #fff;
+    --board-dark: #555;
+    animation: rainbow-bg 10s infinite alternate;
+}
+
+@keyframes rainbow-bg {
+    0% {
+        background-color: #330000;
+    }
+
+    20% {
+        background-color: #333300;
+    }
+
+    40% {
+        background-color: #003300;
+    }
+
+    60% {
+        background-color: #003333;
+    }
+
+    80% {
+        background-color: #000033;
+    }
+
+    100% {
+        background-color: #330033;
+    }
+}
+
+body.theme-rainbow .glass-panel {
+    border: 2px solid;
+    border-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet) 1;
+}
+
+/* Classic Theme Overrides */
+body.theme-classic .glass-panel {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: var(--glass-bg);
+}
+
+body.theme-classic .btn-glass,
+body.theme-classic .dropdown-glass {
+    background: #d7ccc8;
+    color: #3e2723;
+    border: 1px solid #8d6e63;
+}
+
+body.theme-classic .dot.white {
+    border: 1px solid #000;
+}
+
+/* Neon Theme Overrides */
+body.theme-neon .glass-panel {
+    box-shadow: 0 0 10px var(--accent-blue), inset 0 0 20px rgba(0, 255, 255, 0.1);
+    border: 1px solid var(--accent-blue);
+}
+
+body.theme-neon .square.dark {
+    box-shadow: inset 0 0 10px rgba(255, 0, 255, 0.2);
+}
+
+body.theme-neon .square.light {
+    box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Background Animations */
+.background-blobs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: float 10s infinite ease-in-out;
+}
+
+.blob-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--accent-blue);
+    top: -100px;
+    left: -100px;
+}
+
+.blob-2 {
+    width: 300px;
+    height: 300px;
+    background: var(--accent-purple);
+    bottom: -50px;
+    right: -50px;
+    animation-delay: 2s;
+}
+
+.blob-3 {
+    width: 250px;
+    height: 250px;
+    background: var(--accent-pink);
+    top: 40%;
+    left: 40%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, -30px);
+    }
+}
+
+/* Layout */
+.glass-container {
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.game-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Glass Panel Styling */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--glass-shadow);
+    padding: 1.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.game-status h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, var(--text-primary), var(--accent-blue));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.turn-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.white {
+    background-color: #fff;
+    box-shadow: 0 0 10px #fff;
+}
+
+.dot.black {
+    background-color: #000;
+    box-shadow: 0 0 10px #000;
+    border: 1px solid #fff;
+}
+
+.status-message {
+    margin-top: 0.5rem;
+    color: var(--accent-pink);
+    font-weight: bold;
+}
+
+.captured-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.captured-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.captured-row img {
+    width: 20px;
+    height: 20px;
+}
+
+.score {
+    margin-left: auto;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.hidden {
+    display: none;
+}
+
+.history-panel {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.move-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: monospace;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.move-entry {
+    padding: 0.2rem;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-glass {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.settings-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.control-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-glass {
+    padding: 0.5rem;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    border-radius: 8px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.dropdown-glass option {
+    background: var(--bg-color);
+    color: var(--text-primary);
+}
+
+/* Board */
+.board-container {
+    flex: 0 0 auto;
+    padding: 1rem;
+}
+
+.chess-board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 600px;
+    height: 600px;
+    border: 2px solid var(--glass-border);
+    user-select: none;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.square.light {
+    background-color: var(--board-light);
+    color: var(--board-dark);
+    /* For text based pieces if fallback */
+}
+
+.square.dark {
+    background-color: var(--board-dark);
+}
+
+/* Highlights */
+.square.selected {
+    background-color: var(--highlight-selected) !important;
+}
+
+.square.possible-move::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.square.capture-move::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.square.in-check {
+    background-color: var(--highlight-check) !important;
+}
+
+/* Pieces */
+.piece {
+    width: 80%;
+    height: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.2s ease-out;
+    pointer-events: none;
+    pointer-events: none;
+    /* Let clicks pass to square */
+}
+
+/* Piece Themes Removed */
+
+
+/* Responsive */
+/* Responsive / Device Specific */
+.is-mobile .game-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.is-mobile .sidebar {
+    width: 100%;
+    order: 2;
+    /* Controls/Stats below board */
+}
+
+.is-mobile .board-container {
+    order: 1;
+    /* Board first */
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.is-mobile .chess-board {
+    width: 95vw;
+    height: 95vw;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.is-mobile .glass-panel {
+    padding: 1rem;
+}
+
+.is-mobile .game-status h1 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.is-mobile .turn-indicator {
+    justify-content: center;
+}
+
+/* Move status to top primarily */
+.is-mobile .status-message {
+    text-align: center;
+}
+
+/* Sidebar Reordering for Mobile */
+.is-mobile .sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.is-mobile .status-panel {
+    order: 1;
+}
+
+.is-mobile .controls {
+    order: 2;
+    /* Controls immediately after status/board */
+}
+
+.is-mobile .history-panel {
+    order: 3;
+}
+
+.is-mobile .settings-panel {
+    order: 4;
+}
+
+@media (max-width: 900px) {
+    .game-layout {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .chess-board {
+        width: 90vw;
+        height: 90vw;
+        max-width: 500px;
+        max-height: 500px;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: auto;
+    }
+}

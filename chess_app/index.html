@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Chess</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Chess.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+</head>
+
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="glass-container">
+        <div class="game-layout">
+            <div class="sidebar">
+                <div class="panel glass-panel status-panel">
+                    <h1>Glass Chess</h1>
+                    <div class="game-status">
+                        <div class="turn-indicator">
+                            <span id="turn-dot" class="dot white"></span>
+                            <span id="turn-text">White to move</span>
+                        </div>
+                        <div id="check-status" class="status-message hidden"></div>
+                    </div>
+                    <div class="timers">
+                        <!-- Captured Pieces Display -->
+                        <div id="captured-pieces" class="captured-container">
+                            <div class="captured-row">
+                                <span class="cap-label">White captured:</span>
+                                <div id="captured-white"></div>
+                                <span id="score-white" class="score"></span>
+                            </div>
+                            <div class="captured-row">
+                                <span class="cap-label">Black captured:</span>
+                                <div id="captured-black"></div>
+                                <span id="score-black" class="score"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel glass-panel history-panel">
+                    <h3>Move History</h3>
+                    <div id="move-history" class="move-list">
+                        <!-- Moves will be populated here -->
+                    </div>
+                </div>
+
+                <div class="panel glass-panel settings-panel">
+                    <h3>Settings</h3>
+                    <div class="control-group">
+                        <label for="theme-select">Theme:</label>
+                        <select id="theme-select" class="dropdown-glass">
+                            <option value="glass">Glass (Default)</option>
+                            <option value="classic">Classic</option>
+                            <option value="neon">Neon</option>
+                            <option value="ocean">Ocean</option>
+                            <option value="forest">Forest</option>
+                            <option value="cyberpunk">Cyberpunk</option>
+                            <option value="monochrome">Monochrome</option>
+                            <option value="sunset">Sunset</option>
+                            <option value="space">Space</option>
+                            <option value="pastel">Pastel</option>
+                            <option value="gothic">Gothic</option>
+                            <option value="terminal">Terminal</option>
+                            <option value="royal">Royal</option>
+                            <option value="rainbow">Rainbow</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="mode-select">Mode:</label>
+                        <select id="mode-select" class="dropdown-glass">
+                            <option value="pvp">Player vs Player</option>
+                            <option value="pvc">Player vs Computer</option>
+                        </select>
+                    </div>
+                    <!-- Hidden by default unless PVC is selected -->
+                    <div id="difficulty-group" class="control-group hidden">
+                        <label for="difficulty-select">Level:</label>
+                        <select id="difficulty-select" class="dropdown-glass">
+                            <option value="1">1 - Beginner (Random)</option>
+                            <option value="2">2 - Easy (Greedy)</option>
+                            <option value="3">3 - Medium (Basic)</option>
+                            <option value="4">4 - Hard (Smart)</option>
+                            <option value="5">5 - Extreme (Master)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="panel glass-panel controls">
+                    <button id="reset-btn" class="btn-glass">New Game</button>
+                    <button id="flip-btn" class="btn-glass">Flip Board</button>
+                </div>
+            </div>
+
+            <div class="board-container glass-panel">
+                <div id="board" class="chess-board">
+                    <!-- Squares will be generated by JS -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
